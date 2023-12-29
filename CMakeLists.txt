@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.27)
 
 project(MinePhys CXX)
 
@@ -9,4 +9,5 @@ add_subdirectory(modules)
 find_package(SDL3 REQUIRED)
 
 add_subdirectory(voxel.framework)
+add_subdirectory(physics.framework)
 add_subdirectory(classes)
