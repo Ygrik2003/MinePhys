@@ -11,5 +11,12 @@
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/.install/${presetName}"
             }
         }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-multi-ninja",
+            "configurePreset": "linux-multi-ninja"
+        }
+
     ]
 }

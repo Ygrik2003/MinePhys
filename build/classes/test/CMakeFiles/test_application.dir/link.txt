@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_application.dir/test_application.cpp.o -o test_application  -Wl,-rpath,/home/ygrik/minephys/build/voxel.framework/engine:/home/ygrik/minephys/build/modules/SDL ../../voxel.framework/engine/libengine.so ../../modules/SDL/libSDL3.so.0.0.0 
