@@ -2,14 +2,21 @@
     "version": 2,
     "configurePresets": [
         {
-            "name": "linux-multi-ninja",
-            "displayName": "Linux Multi-Ninja",
-            "description": "Sets Ninja Multi-Config generator, build and install directory",
-            "generator": "Ninja Multi-Config",
+            "name": "linux-ninja",
+            "displayName": "Linux Ninja",
+            "description": "Sets Ninja generator, build and install directory",
+            "generator": "Ninja",
             "binaryDir": "${sourceDir}/.build/${presetName}",
             "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/.install/${presetName}"
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/.install/${presetName}",
+                "CMAKE_BUILD_TYPE": "Debug"
             }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-ninja",
+            "configurePreset": "linux-ninja"
         }
     ]
 }

@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION ${CMAKE_VERSION})
 
-find_package(SDL3 REQUIRED)
+find_package(SDL3 REQUIRED SDL3-shared)
 
 add_library(
-    engine SHARED
+    engine STATIC
     ${CMAKE_CURRENT_LIST_DIR}/base.h
     ${CMAKE_CURRENT_LIST_DIR}/window.h
     ${CMAKE_CURRENT_LIST_DIR}/window_sdl.cpp
     ${CMAKE_CURRENT_LIST_DIR}/window_sdl.h)
-target_link_libraries(engine PUBLIC SDL3::SDL3-shared)
-target_include_directories(engine PUBLIC ${CMAKE_CURRENT_LIST_DIR}/)
+target_link_libraries(engine PRIVATE SDL3::SDL3-shared PUBLIC logger)
+target_include_directories(engine PUBLIC ${CMAKE_SOURCE_DIR}/voxel.framework/)
