@@ -19,7 +19,6 @@ void window_sdl::create(std::string title, std::uint16_t width,
 
     SDL_Window *wnd =
         SDL_CreateWindow(title.c_str(), width, height, SDL_WINDOW_VULKAN);
-
     if (wnd == nullptr) {
         // TODO add logger SDL_GetError();
     }
