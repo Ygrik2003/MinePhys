@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION ${CMAKE_VERSION})
 
-find_package(SDL3 REQUIRED SDL3-shared)
-
 add_library(
     engine STATIC
     ${CMAKE_CURRENT_LIST_DIR}/base.h
