@@ -2,21 +2,27 @@
     "version": 2,
     "configurePresets": [
         {
-            "name": "linux-ninja",
+            "name": "linux-llvm-ninja",
             "displayName": "Linux Ninja",
             "description": "Sets Ninja generator, build and install directory",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/.build/${presetName}",
             "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/.install/${presetName}",
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_CXX_COMPILER": {
+                    "type": "INTERNAL",
+                    "value": "clang++"
+                },
+                "CMAKE_C_COMPILER": {
+                    "type": "INTERNAL",
+                    "value": "clang"
+                }
             }
         }
     ],
     "buildPresets": [
         {
-            "name": "linux-ninja",
-            "configurePreset": "linux-ninja"
+            "name": "linux-llvm-ninja",
+            "configurePreset": "linux-llvm-ninja"
         }
     ]
 }
