@@ -2,10 +2,10 @@
     "version": 2,
     "configurePresets": [
         {
-            "name": "linux-llvm-ninja",
-            "displayName": "Linux Ninja",
-            "description": "Sets Ninja generator, build and install directory",
-            "generator": "Ninja",
+            "name": "linux-llvm-multi-ninja",
+            "displayName": "Linux Ninja Multi-Config",
+            "description": "Sets Ninja Multi-Config generator, build and install directory",
+            "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/.build/${presetName}",
             "cacheVariables": {
                 "CMAKE_CXX_COMPILER": {
@@ -21,8 +21,11 @@
     ],
     "buildPresets": [
         {
-            "name": "linux-llvm-ninja",
-            "configurePreset": "linux-llvm-ninja"
+            "name": "linux-llvm-multi-ninja",
+            "configurePreset": "linux-llvm-multi-ninja",
+            "targets": [
+                "test_application"
+            ]
         }
     ]
 }

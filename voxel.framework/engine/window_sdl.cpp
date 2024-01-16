@@ -14,13 +14,13 @@ void window_sdl::create(std::string title, std::uint16_t width,
 {
     int state = SDL_Init(SDL_INIT_EVERYTHING);
     if (state > 0) {
-        // TODO add logger SDL_GetError();
+        logger::log(tag::error, SDL_GetError());
     }
 
     SDL_Window *wnd =
         SDL_CreateWindow(title.c_str(), width, height, SDL_WINDOW_VULKAN);
     if (wnd == nullptr) {
-        // TODO add logger SDL_GetError();
+        logger::log(tag::error, SDL_GetError());
     }
 }
 void window_sdl::resize(std::uint16_t width, std::uint16_t height) {}

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "base.h"
+#include "yg_config.h"
 
 namespace yg
 {
 interface class window
 {
-public:
+  public:
     virtual void create(std::string title, std::uint16_t width,
                         std::uint16_t height, std::uint64_t flags) = 0;
     virtual void resize(std::uint16_t width, std::uint16_t height) = 0;

@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 
 namespace yg
 {
@@ -12,6 +11,6 @@ enum tag
 
 namespace logger
 {
-void log(tag level, std::string message);
+void log(tag level, const char* message);
 }
 } // namespace yg
